@@ -1,25 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import Profile from './Profile/profile component'
+let fullName="John Doe";
+let bio= "I can do almost everything";
+let profession="professional employee"
+let source="https://directemployers.org/wp-content/uploads/2018/08/avatar-JohnDoe.jpg"
+let handleName=(name) => {
+  alert(name);};
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div style={{backgroundColor:"lightgrey"}}>
+   <Profile fullName = {fullName} bio={bio} profession={profession} handleName={handleName} >
+     <img  src={source}/>
+
+   </Profile>
+   </div>
   );
 }
 
